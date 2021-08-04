@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 800px;
+	background: blanchedalmond;
+}
+
+.container {
+	width: 40%;
+	position: fixed;
+}
+.input {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	align-items: center;
+}
+.input .form-control {
+	background:#ffffff;
+	border: none;
+	height: 50px;
+	border-radius: 5px;
+	width: 90%;
+	padding:0px 20px ;
+	font-size: 16px;
+	outline: none;
+}
+.add .fa-plus {
+	background: #ffc800;
+	width: 50px;
+	height:50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #161117;  
+	cursor: pointer;
+	font-size: 30px;
+}
+.todo li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	color: #716973;
+	background: #FA8072	;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-top: 15px;
+}
+.left input {
+	display: none;
+	cursor: pointer;
+}
+.left label {
+	position: relative;
+	cursor: pointer;
+}
+.left label:before {
+	content: "";
+	padding: 11px;
+	display: inline-block;
+	position: relative;
+	margin-right: 8px;
+	vertical-align: middle;
+	background: #412d46;
+	border-radius: 3px;
+}
+
+.left input:checked + label:before {
+	background: #ffc800;
+}
+
+.left input:checked + label:after {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	top: 2px;
+	left: 8px;
+	width: 5px;
+	height: 12px;
+	border: solid #221525;
+	border-width: 0px 2px 2px 0px;
+	transform: rotate(45deg); 
+}
+.remove {
+	color: #ffffff;
+	cursor: pointer;
+	line-height: 1;
+	transform: translateX(48px);
+	transition: .5s;
+}
+
+.remove.active {
+	transform: translateX(0px);
+	transition: .5s;
+} 
